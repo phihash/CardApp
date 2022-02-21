@@ -10,9 +10,50 @@
       margin: 0;
       padding: 0;
     }
-  </style>
+img.emoji {
+height:2.4rem;
+width:2.4rem;
+margin:0.05em 0.1em;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione@3.1.2/extras/css/emojione.min.css"/>
 </head>
 <body>
-  <h1>😫</h1>
+  <div id="cardSection">
+
+
+  </div>
+  <button id="geneBtn">つくる</button>
+  <hr>
+  <h1>q</h1>
+  <h1>２</h1>
+  <h1>q</h1>
+  <h1>q</h1>
+  <h1>e</h1>
+  <h1>o</h1>
+  <h1>l</h1>
+<script src="https://cdn.jsdelivr.net/npm/emojione@3.1.2/lib/js/emojione.min.js"></script>
+<script>
+  const cardSection = document.getElementById("cardSection");
+  const geneBtn = document.getElementById("geneBtn");
+
+class CardGenerator{
+  constructor(){
+
+  }
+}
+const cardGenerateEvent = new CustomEvent('cardGenerate');
+
+
+
+geneBtn.addEventListener("click",() => {
+  cardSection.dispatchEvent(cardGenerateEvent);
+})
+
+cardSection.addEventListener("cardGenerate",() => {
+  cardSection.innerHTML += "<h1>i</h1>";
+})
+
+</script>
 </body>
 </html>
